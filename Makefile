@@ -16,7 +16,7 @@ all: $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJS)
 	$(CC) $^ -o $@
-	@echo "executable successful..."
+	@echo "linking successful..."
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDE)
