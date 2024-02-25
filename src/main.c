@@ -11,6 +11,6 @@
 
 int main(void)
 {
-  printf("hello world in c\n");
+  printf("%lu\n", _strlen("hello world in c"));
   return (0);
 }
