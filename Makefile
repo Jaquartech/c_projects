@@ -23,5 +23,5 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	@echo "Compilation of .o files successful..."
 
 clean:
-	rm -f $(OBJDIR)/*.o $(EXECUTABLE)
+	rm -f $(OBJDIR)/*.o $(BINDIR)/main
 	@echo "cleaning $(OBJDIR)/*.o and $(EXECUTABLE) files..."

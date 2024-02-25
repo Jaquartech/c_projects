@@ -11,6 +11,6 @@
 
 int main(void)
 {
-  printf("hello world\n");
+  printf("hello world in c\n");
   return (0);
 }
