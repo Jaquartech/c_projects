@@ -11,6 +11,10 @@
 
 int main(void)
 {
-  printf("%lu\n", _strlen("hello world in c"));
+  char dest[100];
+  const char * src = "Hello world program";
+  _strcpy(dest, src);
+  printf("%s\n", dest);
+
   return (0);
 }
