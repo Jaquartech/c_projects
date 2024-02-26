@@ -11,11 +11,13 @@
 
 int main(void)
 {
-  char dest[100];
   const char * src = "Hello world program";
-  _strncpy(dest, src, 5);
-  dest[5] = '\0';
-  printf("%s\n", dest);
+  //strchr(src, 'o');
+  printf("%s\n", strchr(src, 'w'));
+  if (*strchr(src, '\0') == '\0')
+  {
+    printf("\\0\n");
+  }
 
   return (0);
 }
