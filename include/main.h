@@ -5,6 +5,7 @@
 typedef char *String;
 
 String _strcpy(char * dest, const char * source);
+char * _strncpy(char * dest, const char * source, size_t len);
 size_t _strlen(String ptr);
 
 #define MAIN_H

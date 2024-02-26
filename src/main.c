@@ -13,7 +13,8 @@ int main(void)
 {
   char dest[100];
   const char * src = "Hello world program";
-  _strcpy(dest, src);
+  _strncpy(dest, src, 5);
+  dest[5] = '\0';
   printf("%s\n", dest);
 
   return (0);
