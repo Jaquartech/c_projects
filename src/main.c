@@ -13,16 +13,19 @@ int main(void)
 {
   const char * src = "Hello world program";
 
-  char * result = _strrchr(src, 'r');
+  char * result = _strchr(src, 'q');
   if (result)
   {
     printf("%zu\n", result - src);
+    if (*result != '\0')
+    {
+      printf("%s\n", result);
+    }
+    else
+    printf("\\0\n");
   }
-
-/*if (*strchr(src, '\0') == '\0')
-  {
-    printf("\\0 \n");
-  }*/
+  else
+  printf("null\n");
 
   return (0);
 }

@@ -12,19 +12,17 @@
   * including the '\0', else returns null.
 */
 
-char * strchr(const char *s, int c)
+char * _strchr(const char *s, int c)
 {
-  if (!s)
-  {
-    return (NULL);
-  }
+  const char * found = NULL;
 
-  while (*s)
-  {
-    if(*s == c) return ((char *)s);
-    s++;
-  }
+  if (!s) return ((char *)found);
 
-  if (*s == '\0' && c == '\0') return ((char *)s);
-  return (NULL);
+  while (*s && *s != c) s++;
+
+  //found = s;
+
+  found = (c == *s)? s : found;
+
+  return ((char *)found);
 }

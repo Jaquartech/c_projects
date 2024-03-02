@@ -21,12 +21,7 @@ char * _strrchr(const char *s, int c)
     s++;
   }
 
-  //if (last_address)
-    //return (last_address);
-
-  //if (*s == c) return ((char *)s);
   last_address = (c == '\0' && c == *s)? (char *)s : last_address;
 
-  //return (NULL);
   return (last_address);
 }
