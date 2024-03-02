@@ -12,12 +12,17 @@
 int main(void)
 {
   const char * src = "Hello world program";
-  //strchr(src, 'o');
-  printf("%s\n", strchr(src, 'w'));
-  if (*strchr(src, '\0') == '\0')
+
+  char * result = _strrchr(src, 'r');
+  if (result)
   {
-    printf("\\0\n");
+    printf("%zu\n", result - src);
   }
+
+/*if (*strchr(src, '\0') == '\0')
+  {
+    printf("\\0 \n");
+  }*/
 
   return (0);
 }
