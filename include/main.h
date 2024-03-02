@@ -4,6 +4,7 @@
 
 typedef char *String;
 
+char * _strrchr(const char *s, int c);
 char * strchr(const char *s, int c);
 String _strcpy(char * dest, const char * source);
 char * _strncpy(char * dest, const char * source, size_t len);

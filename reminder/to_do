@@ -1,0 +1,16 @@
+
+void print_binary(int num);
+int max_var(int num_args, ...);
+void * _mem_move_2(void *restrict dst, const void *restrict src, size_t n);
+void * _mem_move(void *restrict dst, const void *restrict src, size_t n);
+void * _memcpy(void *restrict dst, const void *restrict src, size_t n);
+void * _memset(void *b, int c, size_t len);
+unsigned int _isupper(int c);
+char * _strcat_2(char *restrict dest, const char *restrict source);
+char * _strcat(char *restrict dest, const char *restrict source);
+size_t _strlen(const char *str);
+char * _strrchr(const char *s, int c);
+data _strchr(const char *s, int c);
+char * _strcpy(char * dest, const char * source);
+char * _strncpy(char * dest, const char * source, size_t len);
+char * _stsrncpy_2(char * dest, const char * source, size_t len);
