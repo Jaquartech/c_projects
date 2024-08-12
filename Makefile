@@ -1,12 +1,12 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -std=gnu99
 
-INCDIR = include
-BINDIR = bin
-SRCDIR = src
-OBJDIR = obj
+INCDIR = libc_library_functions/include
+BINDIR = libc_library_functions/bin
+SRCDIR = libc_library_functions/src
+OBJDIR = libc_library_functions/obj
 
-INCLUDE = -I./$(BINDIR)
+INCLUDE = -I./$(INCDIR)
 SRCS = $(wildcard $(SRCDIR)/*.c)
 OBJS = $(SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 EXECUTABLE = $(BINDIR)/main

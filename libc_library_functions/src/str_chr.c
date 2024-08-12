@@ -1,4 +1,4 @@
-#include "../include/main.h"
+#include "main.h"
 
 /**
   * The function locates the first occurrence of c (converted to a char)
@@ -8,11 +8,11 @@
   *
   * @param s: Pointer to the source string.
   * @param c: Converted to char, the first occurrence to search for.
-  * @Return: Returns a pointer to the first occurrence of the character c
+  * @return: Returns a pointer to the first occurrence of the character c
   * including the '\0', else returns null.
 */
 
-char * strchr(const char *s, int c)
+const char * _strchr(const char *s, int c)
 {
   if (!s)
   {
@@ -21,10 +21,10 @@ char * strchr(const char *s, int c)
 
   while (*s)
   {
-    if(*s == c) return ((char *)s);
+    if(*s == c) return (s);
     s++;
   }
 
-  if (*s == '\0' && c == '\0') return ((char *)s);
+  if (*s == '\0') return (s);
   return (NULL);
 }

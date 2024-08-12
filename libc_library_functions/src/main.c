@@ -1,4 +1,4 @@
-#include "../include/main.h"
+#include "main.h"
 
 /**
   * This file is a driver function which marks the entry point of
@@ -11,12 +11,12 @@
 
 int main(void)
 {
-  const char * src = "Hello world program";
+  const char src[] = "Hello world program";
 
-  char * result = _strrchr(src, 'r');
+  char const * result = _strrchr(src, 'r');
   if (result)
   {
-    printf("%zu\n", result - src);
+    printf("result - src =%zu\n", result - src);
   }
 
 /*if (*strchr(src, '\0') == '\0')
