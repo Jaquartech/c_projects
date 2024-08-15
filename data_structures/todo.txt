@@ -1,0 +1,4 @@
+movezeroes in array to the end
+resize and array
+find the missing number in an array
+isPalindrom

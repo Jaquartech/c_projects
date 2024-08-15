@@ -27,32 +27,37 @@ void printInt(void * p)
 
 int main(void)
 {
-  char char_array[] = "hello";
+  // char char_array[] = "hello";
+  // int int_array[] = {79, 2, 48, 23, 90, 50, 101, 92};
+  // float float_array[] = {7.9, 20.7, 48.09, 23.76, 90.7, 5.02, 101.8, 92.0};
+  
+  // int len_char = sizeof(char_array) / sizeof(char_array[0]);
+  // int len_int = sizeof(int_array) / sizeof(int_array[0]);
+  // int len_float = sizeof(float_array) / sizeof(float_array[0]);
+
+  // printf("\n\n");
+
+  // display_optimized(char_array, len_char, sizeof(char), printChar);
+  // reverse_optimized(char_array,len_char, sizeof(char));
+  // display_optimized(char_array, len_char, sizeof(char), printChar);
+
+  // printf("\n\n");
+
+  // display_optimized(int_array, len_int, sizeof(int), printInt);
+  // reverse_optimized(int_array, len_int, sizeof(int));
+  // display_optimized(int_array, len_int, sizeof(int), printInt);
+
+  // printf("\n\n");
+
+  // display_optimized(float_array, len_float, sizeof(float), printFloat);
+  // reverse_optimized(float_array, len_float, sizeof(float));
+  // display_optimized(float_array, len_float, sizeof(float), printFloat);
+
   int int_array[] = {79, 2, 48, 23, 90, 50, 101, 92};
-  float float_array[] = {7.9, 20.7, 48.09, 23.76, 90.7, 5.02, 101.8, 92.0};
-  
-  int len_char = sizeof(char_array) / sizeof(char_array[0]);
+  int * ptr = NULL;
   int len_int = sizeof(int_array) / sizeof(int_array[0]);
-  int len_float = sizeof(float_array) / sizeof(float_array[0]);
-
-  printf("\n\n");
-
-  display_optimized(char_array, len_char, sizeof(char), printChar);
-  reverse_optimise(char_array,len_char, sizeof(char));
-  display_optimized(char_array, len_char, sizeof(char), printChar);
-
-  printf("\n\n");
-
-  display_optimized(int_array, len_int, sizeof(int), printInt);
-  reverse_optimise(int_array, len_int, sizeof(int));
-  display_optimized(int_array, len_int, sizeof(int), printInt);
-
-  printf("\n\n");
-
-  display_optimized(float_array, len_float, sizeof(float), printFloat);
-  reverse_optimise(float_array, len_float, sizeof(float));
-  display_optimized(float_array, len_float, sizeof(float), printFloat);
-  
+  int len_new =  even_int(int_array, &ptr, len_int);
+  display(ptr, len_new);
 
   return (0);
 }

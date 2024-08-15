@@ -168,7 +168,6 @@ void reverse_optimized(void * array, unsigned int len, size_t size)
  * 
  * @param array Pointer to the Array container
  * @param len Length of the Array container
- * @param size size of the data type
  * @return: Returns nothing
  */
 void display(int *ptr, unsigned int len)
@@ -190,6 +189,17 @@ void display(int *ptr, unsigned int len)
   printf("\n");
 }
 
+/**
+ * @brief The function  takes a pointer to an
+ * array of any primitive type, iterates over it and displays the content.
+ * 
+ * @param ptr Pointer to the Array container
+ * @param len Length of the Array container
+ * @param size size of the data type
+ * @param type_print_func pointer to a function which 
+ * accepts a pointer to void type as argument and returns nothing 
+ * @return: Returns nothing
+ */
 void display_optimized(void *ptr, unsigned int len, size_t size, void (*type_print_func)(void *))
 {
      if (!ptr)
@@ -210,3 +220,51 @@ void display_optimized(void *ptr, unsigned int len, size_t size, void (*type_pri
   printf("\n");
 }
 
+/**
+ * @brief The function positive_int takes data array of integer numbers
+ * and returns the length of new data array containing even integers.
+ * the array argument is modified in place.
+ * 
+ * @param source Source containing data
+ * @param dest destinatinon to to conatain array data of even integers
+ * @param len Length of the source array data
+ * @return Returns the lenght of dest containing array data of ven numbers
+ */
+int even_int(int *source, int **dest, unsigned int len)
+{
+    if (!source)
+    {
+        printf("Array is empty\n");
+        return -1;
+    }
+    if (!len)
+    {
+        printf("Length is zero\n");;
+        return -1;
+    }
+    
+    unsigned int index = 0, counter = 0;
+    for (; index < len; index++)
+    {
+        if (source[index] % 2 == 0)
+        {
+            counter++;
+        }   
+    }
+    *dest = malloc(sizeof(int) * counter);
+    if (!(*dest))
+    {
+        printf("Failed to allocate memroy\n");
+        return -1;
+    }
+    unsigned int counts = 0;
+    unsigned int index_new = 0;
+    for (; counts < len; counts++)
+    {
+        if ( source[counts] % 2 == 0)
+        {
+            (*dest)[index_new++] = source[counts];
+        }   
+    }
+    return counter;  
+}

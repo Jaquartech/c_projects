@@ -14,5 +14,6 @@ void reverse(int array[], unsigned int len);
 void display(int *ptr, unsigned int len);
 void reverse_optimise(void * array, unsigned int len, size_t size);
 void display_optimized(void *ptr, unsigned int len, size_t size, void (*type_print_func)(void *));
+int even_int(int *source, int **dest, unsigned int len);
 
 #endif // !ARRAY_H
