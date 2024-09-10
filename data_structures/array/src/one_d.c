@@ -9,7 +9,8 @@
  */
 void _swap(void *a, void *b, size_t size)
 {
-    void *temp = malloc(size);
+    void *temp = (void *) malloc(size);
+    
     if (temp != NULL)
     {
         memcpy(temp, a, size);
@@ -267,4 +268,164 @@ int even_int(int *source, int **dest, unsigned int len)
         }   
     }
     return counter;  
+}
+
+/**
+ * @brief The function tackes an array data, and moves the zero
+ * elements to the end, while maintaining the relative positions
+ * of the non zero elements
+ * 
+ * @param array Pointer to the pointer to a one dimensional array
+ * @param len Length of the array data
+ * @return Returns nothing
+ */
+void move_zeros(int **array, unsigned int len)
+{
+    unsigned int i = 0;
+    int j = 0;
+    if (!(*array))
+    {
+        printf("No array conatainer\n");
+        return;
+    }
+    if (len < 1)
+    {   
+        printf("length cannot be less than one\n");
+        return;
+    }
+    for (; i < len; i++)
+    {
+        if ((*array)[i] != 0 && (*array)[j] == 0)
+            _swap(&(*array)[i], &(*array)[j], sizeof(int));
+        if ((*array)[j] != 0)
+            j++;
+    }
+}
+
+/**
+ * @brief The function tackes an array data and dynamically resizes
+ * it in place, filling the remaing spaces with zeroes
+ * 
+ * @param array Pointer to the pointer to a one dimensional array
+ * @param len Length of the array data
+ * @return Returns lenghh of the newly resized array
+ */
+int resize_array(int ** array, unsigned int len)
+{
+    unsigned int i = 0;
+    
+    if (!(*array))
+    {
+        printf("No array conatainer\n");
+        return -1;
+    }
+    if (len < 1)
+    {   
+        printf("length cannot be les than one\n");
+        return -1;
+    }
+    unsigned int new_len = 2* len;
+    int *ptr =(int *)calloc(new_len, sizeof(int));
+    printf("ptr inside =%p\n", ptr);
+    if (!ptr)
+    {
+        return -1;
+    }
+    for (; i < len; i++)
+    {
+        ptr[i] = (*array)[i];
+    }
+    *array = ptr;
+    return new_len;
+}
+
+/**
+ * @brief The function tackes an array data, having n-1 sequence number
+ * of elements, and returns the missing number
+ * 
+ * @param array Pointer to the pointer to a one dimensional array
+ * @param len Length of the array data
+ * @return Returns the missing number
+ */
+int missing_number(int ** array, unsigned int len)
+{
+    unsigned int i = 0;
+    int sum = 0;
+    if (!(*array))
+    {
+        printf("No array conatainer\n");
+        return -1;
+    }
+    if (len < 1)
+    {   
+        printf("length cannot be less than one\n");
+        return -1;
+    }
+    int n = 1 + len;
+    sum = n * (n + 1) / 2;
+    for (; i < len; i++)
+    {
+        sum -= (*array)[i];
+    }
+    
+    return sum;
+}
+
+
+
+bool isPalindrome(const char * array, unsigned int len)
+{
+    if (!array)
+    {
+        printf("No array conatainer\n");
+        return -1;
+    }
+    if (len < 1)
+    {   
+        printf("length cannot be less than one\n");
+        return -1;
+    }
+    unsigned start = 0, end = len - 1;
+    
+    for (; start < end; start++)
+    {
+        if (array[start] != array[end])
+        {
+            printf("from f\n");
+            return false;
+        }
+        end--;
+    }
+    
+    return true;
+}
+
+/**
+ * @brief: takes a byte level pointer to a float and prints the value
+ * @param: Byte pointer to the float type
+ * @return: Returns nothing
+ */
+void printFloat(void * p)
+{
+    printf("%0.2f ", *(float *)p);
+}
+
+/**
+ * @brief: takes a pointer to a character and prints the value
+ * @param: Byte pointer to the character type
+ * @return: Returns nothing
+ */
+void printChar(void * p)
+{
+    printf("%c ", *(char *)p);
+}
+
+/**
+ * @brief: takes a byte level pointer to an int and prints the value
+ * @param: Byte pointer to the int type
+ * @return: Returns nothing
+ */
+void printInt(void * p)
+{
+    printf("%d ", *(int *)p);
 }

@@ -87,8 +87,8 @@
 # 	@echo "cleaning $(OBJ_DIR)/*.o, $(DEP_DIR)/*.d, and $(EXECUTABLE) files..."
 
 # Directories
-INC_DIRS = -I./data_structures/array/include -I./libc_library_functions/include
-SRC_DIRS = data_structures/array/src libc_library_functions/src .
+INC_DIRS = -I./data_structures/array/include -I./libc_library_functions/include -I./data_structures/list/include
+SRC_DIRS = data_structures/array/src data_structures/list/src .
 OBJ_DIR = objects
 DEP_DIR = dependencies
 EXE_DIR = executables

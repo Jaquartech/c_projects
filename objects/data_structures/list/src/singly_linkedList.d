@@ -1,4 +1,5 @@
-objects/./main.o: main.c /usr/include/stdc-predef.h \
+objects/data_structures/list/src/singly_linkedList.o: \
+ data_structures/list/src/singly_linkedList.c /usr/include/stdc-predef.h \
  data_structures/list/include/lists.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

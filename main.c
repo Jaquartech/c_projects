@@ -1,5 +1,6 @@
-#include "main.h"
-#include "array.h"
+// #include "main.h"
+//#include "array.h"
+#include "lists.h"
 
 /**
   * This file is a driver function which marks the entry point of
@@ -10,54 +11,32 @@
   * integer constant is returned.
 */
 
-void printFloat(void * p)
-{
-    printf("%0.2f ", *(float *)p);
-}
-
-void printChar(void * p)
-{
-    printf("%c ", *(char *)p);
-}
-
-void printInt(void * p)
-{
-    printf("%d ", *(int *)p);
-}
-
+student *head = NULL;
+unsigned int count = 0;
 int main(void)
 {
-  // char char_array[] = "hello";
-  // int int_array[] = {79, 2, 48, 23, 90, 50, 101, 92};
-  // float float_array[] = {7.9, 20.7, 48.09, 23.76, 90.7, 5.02, 101.8, 92.0};
-  
-  // int len_char = sizeof(char_array) / sizeof(char_array[0]);
-  // int len_int = sizeof(int_array) / sizeof(int_array[0]);
-  // int len_float = sizeof(float_array) / sizeof(float_array[0]);
+    addFirst(&head, "Chris", 24);
+    addFirst(&head, "Ifeanyi", 30);
+    addFirst(&head, "Chima", 28);
+    // addLast(&head, "Ada", 27);
+    //addLast(&head, "Uche", 31);
+    addAt(&head, "Miracle", 32, 0);
+    addAt(&head, "Charles", 36, 1);
+    ///addAt(&head, "Favor", 32, 5);
 
-  // printf("\n\n");
+    unsigned int s = size();
+    printf("Size = %d\n", s);
 
-  // display_optimized(char_array, len_char, sizeof(char), printChar);
-  // reverse_optimized(char_array,len_char, sizeof(char));
-  // display_optimized(char_array, len_char, sizeof(char), printChar);
+    display_(head);
 
-  // printf("\n\n");
+    //deleteFirst(&head);
+    //deleteFirst(&head);
+    deleteAt(&head, 6);
+    unsigned int s_1 = size();
 
-  // display_optimized(int_array, len_int, sizeof(int), printInt);
-  // reverse_optimized(int_array, len_int, sizeof(int));
-  // display_optimized(int_array, len_int, sizeof(int), printInt);
+    printf("Size = %d\n", s_1);
 
-  // printf("\n\n");
-
-  // display_optimized(float_array, len_float, sizeof(float), printFloat);
-  // reverse_optimized(float_array, len_float, sizeof(float));
-  // display_optimized(float_array, len_float, sizeof(float), printFloat);
-
-  int int_array[] = {79, 2, 48, 23, 90, 50, 101, 92};
-  int * ptr = NULL;
-  int len_int = sizeof(int_array) / sizeof(int_array[0]);
-  int len_new =  even_int(int_array, &ptr, len_int);
-  display(ptr, len_new);
+    display_(head);
 
   return (0);
 }

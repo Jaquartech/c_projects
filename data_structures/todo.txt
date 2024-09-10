@@ -2,3 +2,45 @@ movezeroes in array to the end
 resize and array
 find the missing number in an array
 isPalindrom
+
+
+movezeroes in array to the end
+
+point i, on non zeros
+pointer j on zeros
+
+travers array using i,
+    if ith element != zero and jth element == 0
+        swap
+    if jth element != 0,
+        increment j
+
+
+resize and array
+
+input 1d array, lenght of array
+
+1. create a new array of capacity 2 * original lenght
+2. copy old to new
+
+find the missing number in an array
+
+input: 1d array and lenght of array
+logic:
+1. find n i.e  max number = len + 1
+2. find sum of n natural number
+3. iterate throught the array subtracting each element from the sum
+4. return sum
+
+isPalindrom
+
+input:
+    1d_array, and lenght
+
+logic
+    use pointers from start and from end indexes
+    iterate in opposite directions by increment start
+    and dcrementing end pointer, until start is  grester than end
+
+    ccompare each element for equality at each iteration, returing a boolean true 
+    if matched, else return false

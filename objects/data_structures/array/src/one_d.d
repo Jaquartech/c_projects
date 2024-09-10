@@ -57,7 +57,8 @@ objects/data_structures/array/src/one_d.o: \
  /usr/include/linux/limits.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
- /usr/include/x86_64-linux-gnu/bits/posix2_lim.h
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h
 /usr/include/stdc-predef.h:
 data_structures/array/include/array.h:
 /usr/include/stdio.h:
@@ -125,3 +126,4 @@ data_structures/array/include/array.h:
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h:
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h:
